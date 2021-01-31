@@ -1,4 +1,3 @@
-/*dê uma olhada no site "css tricks" para aprender truques p css*/
 /* Global =============================*/
 :root {
     --dark-blue: #363f5f;
@@ -32,7 +31,7 @@ body {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border-width: 0;
-} /*esse código acima, fez as palavras balanço e transações sumirem mas continuarem visíveis para os leitores de tela*/
+} 
 
 .container {
     width: min(90vw, 800px); 
@@ -79,10 +78,9 @@ button:hover {
     background: var(--light-green);
 }
 
-.button.new { /* caso eu tivesse separado o .button do .new, eu teria procurado uma caixa new dentro da caixa button. Mas como está junto, eu estou procurando uma caixa que tenha button e new*/
+.button.new { 
     display: inline-block;
     margin-bottom: .8rem;
-    /*o margin só funciona com o display block, mas o display block pega a caixa toda como elemento. aplicando esse display, pode ser aplicado o margin e a seta vai virar mãozinha só no elemento, não mais na caixa inteira.*/
 }
 
 .button.cancel {
@@ -161,7 +159,7 @@ header {
 #transaction {
     display: block;
     width: 100%;
-    overflow-x: auto; /*overflow é para mecher no que está "transbordando" no layout. nesse caso ele está dando uma soluçaõ para a tabela.*/
+    overflow-x: auto; 
 }
 #data-table {
     width: 100%;
@@ -216,7 +214,7 @@ td.expense {
 
 /*Modal ===============================*/
 
-.modal-overlay { /*criando aquele efeito de escurecimento da tela*/
+.modal-overlay { 
     width: 100%;
     height: 100%;
 
@@ -224,18 +222,18 @@ td.expense {
 
     position: fixed;
     top: 0;
-/*posicionando a caixa branca no meio*/
+
     display: flex;
     align-items: center;
     justify-content: center;
-/*deixa a caixinha escondida e mantém a tela clara*/
+
     opacity: 0;
     visibility: hidden;
 
     z-index: 999;
 }
 
-.modal-overlay.active { /*faz a caixa aparecer quando junto da classe "active"*/
+.modal-overlay.active { 
     opacity: 1;
     visibility: visible;
 }
@@ -246,8 +244,6 @@ td.expense {
 
     position: relative;
     z-index: 1;
-    /*width: 90%;
-    max-width: 500px; para add lateralidade a caixa branca*/
 }
 
 /*Form =================================*/
@@ -305,10 +301,8 @@ footer {
     }
 
     #balance {
-        /*display: block; mantém os itens um abaixo do outro*/
-        /*display: flex; mantém os itens um ao lado do outro*/
-        display: grid; /*o grid trabalha na horizontal e vertical*/
-        grid-template-columns: repeat(3, 1fr); /*divide a tela em frações. tbm pode usar pixel e porcentagem.  essa função poderia ser substituída por "1fr 1fr 1fr"*/
-        gap: 2rem;/*add espaço entre as colunas*/
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 2rem;
     }
 }

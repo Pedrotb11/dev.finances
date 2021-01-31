@@ -27,7 +27,7 @@
                     </span>
                     <img src="./assets/income.svg" alt="imagem de Entradas">
                 </h3>
-                <p>R$ 5.000,00</p>
+                <p id="incomeDisplay">R$ 5.000,00</p>
             </div>
 
             <div class="card">
@@ -37,7 +37,7 @@
                     </span>
                     <img src="./assets/expense.svg" alt="imagem de saídas">
                 </h3>
-                <p>R$ 2.000,00</p>
+                <p id="expenseDisplay">R$ 2.000,00</p>
             </div>
 
             <div class="card total">
@@ -47,7 +47,7 @@
                     </span>
                     <img src="./assets/total.svg" alt="imagem de total">
                 </h3>
-                <p>R$ 3.000,00</p>
+                <p id="totalDisplay">R$ 3.000,00</p>
             </div>
 
         </section>
@@ -70,44 +70,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="description">Luz</td>
-                        <td class="expense">- R$ 500,00</td>
-                        <td class="date">23/01/2021</td>
-                        <td>
-                            <img src="./assets/minus.svg" alt="Remover Transação">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="description">Criação website</td>
-                        <td class="income">R$ 5000,00</td>
-                        <td class="date">23/01/2021</td>
-                        <td>
-                            <img src="./assets/minus.svg" alt="Remover Transação">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="description">Internet</td>
-                        <td class="expense">- R$ 200,00</td>
-                        <td class="date">23/01/2021</td>
-                        <td>
-                            <img src="./assets/minus.svg" alt="Remover Transação">
-                        </td>
-                    </tr>
                 </tbody>
             </table>
         </section>
     </main>
 
-    <div class="modal-overlay"> <!--criando o escurecimento de tela com a caixinha branca-->
+    <div class="modal-overlay"> 
         <div class="modal">
                 <div id="form">
                     <h2>Nova Transação</h2>
-                    <form action=""> <!--form serve para criar formularios(entrada de dados)-->
+                    <form action=""> 
                         <div class="input-group">
                             <label  
                                 class="sr-only" 
-                                for="description">Descrição</label> <!--label: serve pra explicar o input. precisa ter o nome do id. a class sr-only vai ler o label.-->
+                                for="description">Descrição</label> 
                             <input 
                                 type="text" 
                                 id="description" 
@@ -126,7 +102,7 @@
                                 id="amount" 
                                 name="amount"
                                 placeholder="0,00"
-                            /> <!-- ctrl + D para selecionar outras palavras iguais-->
+                            /> 
                             <small class="help">Use o sinal - (negativo) para despesas e , (vírgula) para casas decimais</small>
                         </div>
 
@@ -157,23 +133,7 @@
         <p>dev.finances</p>
     </footer>
 
-    <script>
-        const Modal = { //se usar "const" é pq vc não vai alterar isso. caso vc vá alterar, use "let"
-            open(){
-                // abrir modal
-                // adicionar a class active do modal
-                document.querySelector('.modal-overlay')//faz ele procurar em todo o html o 'modal-overlay'
-                .classList.add('active')//vai adicioar o 'active' a lista de classes dele.
-            },
-            close(){
-                //fechar o modal
-                //remover a class active do modal
-                document.querySelector('.modal-overlay')
-                .classList.remove('active')
-
-            }
-        }
-    </script>
+    <script src="./scripts.js"></script>
 </body>
 
 </html>
